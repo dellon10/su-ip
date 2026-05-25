@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title("Analisis Sentimen")
 
-df = pd.read_csv("dataset.csv")
+df = pd.read_csv("dataset_kelud_mei.csv")
 
 df['tanggal'] = pd.to_datetime(df['tanggal'])
 
