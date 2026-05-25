@@ -4,6 +4,7 @@ import pandas as pd
 st.title("Analisis Sentimen")
 
 df = pd.read_csv("dataset_kelud_mei.csv")
+st.write(df.columns)
 
 df['tanggal'] = pd.to_datetime(df['tanggal'])
 
