@@ -5,7 +5,9 @@ st.title("Analisis Sentimen")
 
 df = pd.read_csv("dataset_kelud_mei.csv")
 
-df['waktu'] = pd.to_datetime(df['waktu'])
+df['waktu'] = pd.to_datetime(df['waktu'], errors='coerce')
+
+df = df.dropna(subset=['waktu'])
 
 bulan = st.selectbox(
     "Pilih Bulan",
