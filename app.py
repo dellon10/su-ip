@@ -3,10 +3,9 @@ import pandas as pd
 
 st.title("Analisis Sentimen")
 
-df = pd.read_csv("dataset_kelud_mei.csv")
-st.write(df.columns)
+df = pd.read_csv("dataset.csv")
 
-df['tanggal'] = pd.to_datetime(df['tanggal'])
+df['waktu'] = pd.to_datetime(df['waktu'])
 
 bulan = st.selectbox(
     "Pilih Bulan",
@@ -14,10 +13,8 @@ bulan = st.selectbox(
 )
 
 if bulan == "Mei":
-    filtered = df[df['tanggal'].dt.month == 5]
+    filtered = df[df['waktu'].dt.month == 5]
 else:
-    filtered = df[df['tanggal'].dt.month == 6]
+    filtered = df[df['waktu'].dt.month == 6]
 
 st.dataframe(filtered)
-
-st.bar_chart(filtered['sentimen'].value_counts())
