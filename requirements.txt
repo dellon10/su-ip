@@ -4,3 +4,4 @@ Sastrawi
 streamlit
 matplotlib
 wordcloud
+plotly
