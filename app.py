@@ -39,7 +39,7 @@ C_NEG = "#C0392B"
 # ── LOAD DATA ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("dataset_kelud_final_prediction.csv")
+    df = pd.read_csv("kelud_final.csv")
     df.columns = df.columns.str.strip().str.lower()
 
     # Normalise waktu → urutan kasar untuk sorting
