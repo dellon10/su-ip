@@ -311,62 +311,46 @@ if sentimen_sel:
     df = df[df["label"].isin(sentimen_sel)]
 
 # ── HEADER ───────────────────────────────────────────────────────────────────
-st.markdown(f"""
-<div style="
-    background: linear-gradient(135deg, #2e1f18 0%, #1e1410 60%, #1a1210 100%);
-    border: 1px solid #3a2e27;
-    border-radius: 20px;
-    padding: 2rem 2.25rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
-">
-    <!-- Decorative contour lines (SVG) -->
-    <svg style="position:absolute;right:0;top:0;opacity:0.07;width:280px;height:160px;"
-         viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="240" cy="80" rx="200" ry="60" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="160" ry="46" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="120" ry="33" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="82" ry="22" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="48" ry="13" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="22" ry="6" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-    </svg>
+import streamlit.components.v1 as components
 
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-        <div>
-            <div style="
-                font-family:'Sora',sans-serif;
-                font-size:28px;font-weight:800;
-                color:#ffffff;
-                letter-spacing:-0.03em;line-height:1.1;
-                text-shadow: 0 1px 12px rgba(0,0,0,0.6);
-            ">Dashboard Sentimen<br>
-                <span style="color:#FF8C42;text-shadow:0 0 20px rgba(255,140,66,0.5);">Wisata Gunung Kelud</span>
-            </div>
-            <div style="
-                margin-top:10px;font-size:13px;color:#c8bfb4;
-                font-family:'Inter',sans-serif;font-weight:500;letter-spacing:0.01em;
-            ">
-                Analisis ulasan pengunjung &nbsp;·&nbsp; {len(df_all):,} total data
-            </div>
-        </div>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-            <div style="
-                background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.35);
-                border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#FF8C42;
-                font-family:sans-serif;letter-spacing:0.03em;
-            ">🔥 {len(df):,} ulasan ditampilkan</div>
-            <div style="
-                background:rgba(42,157,92,0.1);border:1px solid rgba(42,157,92,0.35);
-                border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#2ecc90;
-                font-family:sans-serif;letter-spacing:0.03em;
-            ">📍 {grup_sel}</div>
-        </div>
+_n_all = len(df_all)
+_n_df  = len(df)
+_grup  = grup_sel
+
+_header_html = f"""
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<div style="background:linear-gradient(135deg,#2e1f18 0%,#1e1410 60%,#1a1210 100%);border:1px solid #3a2e27;border-radius:20px;padding:2rem 2.25rem;position:relative;overflow:hidden;font-family:Inter,sans-serif;">
+  <svg style="position:absolute;right:0;top:0;opacity:0.07;width:280px;height:160px;" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="240" cy="80" rx="200" ry="60" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="240" cy="80" rx="160" ry="46" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="240" cy="80" rx="120" ry="33" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="240" cy="80" rx="82"  ry="22" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="240" cy="80" rx="48"  ry="13" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="240" cy="80" rx="22"  ry="6"  stroke="#E8722A" stroke-width="1.5" fill="none"/>
+  </svg>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <div style="font-family:Sora,sans-serif;font-size:28px;font-weight:800;color:#ffffff;letter-spacing:-0.03em;line-height:1.15;">
+        Dashboard Sentimen<br>
+        <span style="color:#FF8C42;">Wisata Gunung Kelud</span>
+      </div>
+      <div style="margin-top:10px;font-size:13px;color:#c8bfb4;font-weight:500;">
+        Analisis ulasan pengunjung &nbsp;&middot;&nbsp; {_n_all:,} total data
+      </div>
     </div>
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+      <div style="background:rgba(232,114,42,0.12);border:1px solid rgba(232,114,42,0.4);border-radius:30px;padding:6px 18px;font-size:12px;font-weight:600;color:#FF8C42;">
+        🔥 {_n_df:,} ulasan ditampilkan
+      </div>
+      <div style="background:rgba(42,157,92,0.12);border:1px solid rgba(42,157,92,0.4);border-radius:30px;padding:6px 18px;font-size:12px;font-weight:600;color:#2ecc90;">
+        📍 {_grup}
+      </div>
+    </div>
+  </div>
 </div>
-""", unsafe_allow_html=True)
+"""
+components.html(_header_html, height=148, scrolling=False)
+
 
 # ── METRIK ────────────────────────────────────────────────────────────────────
 total   = len(df)
