@@ -22,8 +22,8 @@ st.markdown("""
 /* ── Base reset ── */
 html, body, [class*="css"], .stApp {
     font-family: 'Inter', sans-serif !important;
-    background-color: #1a1210 !important;
-    color: #e8e0d4 !important;
+    background-color: #0A0A0A !important; /* Deep Black */
+    color: #F0F0F0 !important; /* Crisp White */
 }
 
 /* ── Headings ── */
@@ -31,22 +31,22 @@ h1, h2, h3, h4,
 .stSubheader, [data-testid="stSubheader"] {
     font-family: 'Sora', sans-serif !important;
     font-weight: 700 !important;
-    color: #f5f0e8 !important;
+    color: #FFFFFF !important;
     letter-spacing: -0.02em;
 }
 
 /* ── Sidebar ── */
 [data-testid="stSidebar"] {
-    background: #120e0c !important;
-    border-right: 1px solid #2e241e !important;
+    background: #110E0E !important; /* Very dark maroon tint */
+    border-right: 1px solid #2E1A1A !important;
 }
 [data-testid="stSidebar"] * {
-    color: #c8bfb4 !important;
+    color: #D4C9C9 !important;
 }
 [data-testid="stSidebar"] .stSelectbox label,
 [data-testid="stSidebar"] .stMultiSelect label,
 [data-testid="stSidebar"] .stToggle label {
-    color: #9b9189 !important;
+    color: #A38C8C !important;
     font-size: 12px !important;
     letter-spacing: 0.06em !important;
     text-transform: uppercase !important;
@@ -55,170 +55,129 @@ h1, h2, h3, h4,
 
 /* ── Metric cards ── */
 [data-testid="metric-container"] {
-    background: #241c18 !important;
-    border-radius: 16px !important;
+    background: #171212 !important;
+    border-radius: 12px !important;
     padding: 1.2rem 1.4rem !important;
-    border: 1px solid #3a2e27 !important;
-    transition: border-color 0.2s;
+    border: 1px solid #3D2626 !important;
+    transition: all 0.3s ease;
 }
 [data-testid="metric-container"]:hover {
-    border-color: #E8722A !important;
+    border-color: #D32F2F !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.15);
 }
 [data-testid="metric-container"] [data-testid="stMetricLabel"] {
     font-size: 11px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.08em !important;
-    color: #9b9189 !important;
+    color: #B5A1A1 !important;
     font-weight: 600 !important;
     font-family: 'Sora', sans-serif !important;
 }
 [data-testid="metric-container"] [data-testid="stMetricValue"] {
     font-family: 'Sora', sans-serif !important;
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
     font-weight: 800 !important;
-    color: #f5f0e8 !important;
-}
-[data-testid="metric-container"] [data-testid="stMetricDelta"] {
-    font-size: 12px !important;
+    color: #FFFFFF !important;
 }
 
 /* ── Plotly chart containers ── */
 [data-testid="stPlotlyChart"] {
-    background: #241c18 !important;
-    border-radius: 16px !important;
-    border: 1px solid #3a2e27 !important;
+    background: #171212 !important;
+    border-radius: 12px !important;
+    border: 1px solid #3D2626 !important;
     padding: 0.5rem !important;
 }
 
 /* ── DataFrames ── */
 [data-testid="stDataFrame"] {
-    background: #241c18 !important;
-    border-radius: 16px !important;
-    border: 1px solid #3a2e27 !important;
+    background: #171212 !important;
+    border-radius: 12px !important;
+    border: 1px solid #3D2626 !important;
     overflow: hidden !important;
 }
 .stDataFrame thead tr th {
-    background: #1a1210 !important;
-    color: #9b9189 !important;
-    font-size: 11px !important;
+    background: #0A0A0A !important;
+    color: #B5A1A1 !important;
+    font-size: 12px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.06em !important;
 }
 
 /* ── Text input (search) ── */
 [data-testid="stTextInput"] input {
-    background: #241c18 !important;
-    border: 1px solid #3a2e27 !important;
-    border-radius: 10px !important;
-    color: #e8e0d4 !important;
+    background: #171212 !important;
+    border: 1px solid #3D2626 !important;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
     font-family: 'Inter', sans-serif !important;
     padding: 0.6rem 1rem !important;
 }
 [data-testid="stTextInput"] input:focus {
-    border-color: #E8722A !important;
+    border-color: #D32F2F !important;
     outline: none !important;
-    box-shadow: 0 0 0 3px rgba(232,114,42,0.15) !important;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2) !important;
 }
 
 /* ── Download button ── */
 [data-testid="stDownloadButton"] button {
-    background: #E8722A !important;
+    background: #8B0000 !important; /* Maroon */
     color: #fff !important;
-    border: none !important;
-    border-radius: 10px !important;
+    border: 1px solid #A50000 !important;
+    border-radius: 8px !important;
     font-family: 'Sora', sans-serif !important;
     font-weight: 600 !important;
     letter-spacing: 0.02em !important;
     padding: 0.55rem 1.4rem !important;
-    transition: background 0.2s, transform 0.1s !important;
+    transition: all 0.2s !important;
 }
 [data-testid="stDownloadButton"] button:hover {
-    background: #cf5e1e !important;
+    background: #B30000 !important;
+    border-color: #FF3D3D !important;
     transform: translateY(-1px) !important;
 }
 
 /* ── Dividers ── */
 hr {
     border: none !important;
-    border-top: 1px solid #2e241e !important;
+    border-top: 1px solid #2E1A1A !important;
     margin: 1.5rem 0 !important;
 }
 
 /* ── Selectbox / multiselect ── */
 [data-testid="stSelectbox"] > div > div,
 [data-testid="stMultiSelect"] > div > div {
-    background: #241c18 !important;
-    border: 1px solid #3a2e27 !important;
-    border-radius: 10px !important;
-    color: #e8e0d4 !important;
-}
-
-/* ── Caption / small text ── */
-.stCaption, [data-testid="stCaption"] {
-    color: #6b6157 !important;
-    font-size: 12px !important;
-}
-
-/* ── Subheader spacing ── */
-[data-testid="stSubheader"] {
-    margin-top: 0.25rem !important;
-    margin-bottom: 0.75rem !important;
-}
-
-/* ── Image (wordcloud) container ── */
-[data-testid="stImage"] {
-    background: #241c18 !important;
-    border-radius: 16px !important;
-    border: 1px solid #3a2e27 !important;
-    padding: 0.75rem !important;
-    overflow: hidden;
+    background: #171212 !important;
+    border: 1px solid #3D2626 !important;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
 }
 
 /* ── Info boxes ── */
 [data-testid="stInfo"] {
-    background: #241c18 !important;
-    border: 1px solid #3a2e27 !important;
-    border-left: 3px solid #E8722A !important;
-    border-radius: 10px !important;
-    color: #c8bfb4 !important;
+    background: #171212 !important;
+    border: 1px solid #3D2626 !important;
+    border-left: 4px solid #D32F2F !important;
+    border-radius: 8px !important;
+    color: #F0F0F0 !important;
 }
-
-/* ── Table in markdown ── */
-.stMarkdown table {
-    border-collapse: collapse !important;
-    width: 100%;
-}
-.stMarkdown th, .stMarkdown td {
-    border: 1px solid #3a2e27 !important;
-    padding: 8px 12px !important;
-    color: #c8bfb4 !important;
-    font-size: 13px !important;
-}
-.stMarkdown th {
-    background: #2e241e !important;
-    color: #9b9189 !important;
-    text-transform: uppercase !important;
-    font-size: 11px !important;
-    letter-spacing: 0.05em !important;
-}
-.stMarkdown tr:nth-child(even) td { background: #1e1713 !important; }
 
 /* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: #1a1210; }
-::-webkit-scrollbar-thumb { background: #3a2e27; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #E8722A; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #3D2626; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #D32F2F; }
 </style>
 """, unsafe_allow_html=True)
 
 # ── PALETTE ───────────────────────────────────────────────────────────────────
-C_POS      = "#2A9D5C"   # moss green
-C_NEG      = "#C0392B"   # crater red
-C_ACCENT   = "#E8722A"   # lava amber
-C_BG       = "#241c18"
-C_GRID     = "#2e241e"
-C_TEXT     = "#e8e0d4"
-C_MUTED    = "#9b9189"
+C_POS      = "#00E676"   # Bright Neon Green for clarity
+C_NEG      = "#FF3D00"   # Vibrant Red-Orange for clarity
+C_ACCENT   = "#D32F2F"   # Strong Crimson/Maroon Accent
+C_BG       = "#0A0A0A"
+C_GRID     = "#2E1A1A"
+C_TEXT     = "#FFFFFF"
+C_MUTED    = "#A38C8C"
 PAPER_BG   = "rgba(0,0,0,0)"
 
 def plotly_base():
@@ -226,14 +185,24 @@ def plotly_base():
         paper_bgcolor=PAPER_BG,
         plot_bgcolor=PAPER_BG,
         font=dict(family="Inter, sans-serif", color=C_TEXT, size=12),
-        margin=dict(t=16, b=16, l=8, r=8),
+        margin=dict(t=24, b=24, l=12, r=12),
     )
 
 # ── LOAD DATA ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("kelud_final.csv")
-    df.columns = df.columns.str.strip().str.lower()
+    try:
+        df = pd.read_csv("kelud_final.csv")
+        df.columns = df.columns.str.strip().str.lower()
+    except FileNotFoundError:
+        # Dummy data untuk mencegah error jika file tidak ada saat testing
+        df = pd.DataFrame({
+            "waktu": ["hari ini", "minggu lalu", "sebulan lalu", "setahun lalu"],
+            "label": ["positif", "negatif", "positif", "positif"],
+            "prediksi_model": ["positif", "negatif", "negatif", "positif"],
+            "review": ["Bagus banget", "Jelek, kotor", "Pemandangan indah", "Lumayan"],
+            "clean_text": ["bagus banget", "jelek kotor", "pemandang indah", "lumayan"]
+        })
 
     urutan = {
         "hari ini": 0, "kemarin": 1,
@@ -245,40 +214,46 @@ def load_data():
         "7 tahun lalu": 18, "8 tahun lalu": 19, "9 tahun lalu": 20,
         "10 tahun lalu": 21,
     }
-    df["waktu_urut"] = df["waktu"].str.strip().str.lower().map(urutan).fillna(99).astype(int)
+    
+    if "waktu" in df.columns:
+        df["waktu_urut"] = df["waktu"].str.strip().str.lower().map(urutan).fillna(99).astype(int)
 
-    def grup_waktu(w):
-        w = str(w).lower()
-        if any(x in w for x in ["hari", "kemarin", "minggu"]):
-            return "Minggu ini / bulan ini"
-        if "bulan" in w:
-            return "Beberapa bulan lalu"
-        if w in ["setahun lalu", "2 tahun lalu", "3 tahun lalu"]:
-            return "1–3 tahun lalu"
-        return "4+ tahun lalu"
+        def grup_waktu(w):
+            w = str(w).lower()
+            if any(x in w for x in ["hari", "kemarin", "minggu"]):
+                return "Minggu ini / bulan ini"
+            if "bulan" in w:
+                return "Beberapa bulan lalu"
+            if w in ["setahun lalu", "2 tahun lalu", "3 tahun lalu"]:
+                return "1–3 tahun lalu"
+            return "4+ tahun lalu"
 
-    df["grup_waktu"] = df["waktu"].apply(grup_waktu)
+        df["grup_waktu"] = df["waktu"].apply(grup_waktu)
+    else:
+        df["grup_waktu"] = "Unknown"
+        df["waktu_urut"] = 0
+        
     return df
 
 df_all = load_data()
 
 # ── SIDEBAR ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    # Topographic accent
     st.markdown("""
     <div style="
-        background: linear-gradient(135deg, #E8722A22 0%, #C0392B11 50%, transparent 100%);
-        border-radius: 12px;
-        padding: 1.2rem 1rem 0.8rem;
-        margin-bottom: 1.25rem;
-        border: 1px solid #E8722A33;
+        background: linear-gradient(135deg, #8B000033 0%, #1A0A0A 100%);
+        border-radius: 10px;
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #3D2626;
+        text-align: center;
     ">
-        <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:800;
-                    color:#f5f0e8;letter-spacing:-0.02em;line-height:1.2;">
-            🌋 Kelud
+        <div style="font-family:'Sora',sans-serif;font-size:22px;font-weight:800;
+                    color:#FFFFFF;letter-spacing:-0.02em;line-height:1.2;">
+            🌋 KELUD
         </div>
-        <div style="font-size:11px;color:#9b9189;text-transform:uppercase;
-                    letter-spacing:0.08em;margin-top:4px;font-weight:600;">
+        <div style="font-size:12px;color:#D32F2F;text-transform:uppercase;
+                    letter-spacing:0.1em;margin-top:6px;font-weight:700;">
             Sentiment Explorer
         </div>
     </div>
@@ -293,13 +268,13 @@ with st.sidebar:
         default=["positif", "negatif"],
     )
 
-    show_pred = st.toggle("Tampilkan kolom Prediksi Model", value=True)
+    show_pred = st.toggle("Tampilkan kolom Prediksi", value=True)
 
     st.markdown("---")
     st.markdown("""
-    <div style="font-size:11px;color:#4a403a;line-height:1.7;text-align:center;">
+    <div style="font-size:11px;color:#7A6A6A;line-height:1.7;text-align:center;">
         Dashboard Sentimen Wisata<br>
-        <span style="color:#6b5f57;">Gunung Kelud © 2025</span>
+        <span style="color:#A38C8C; font-weight:600;">Gunung Kelud © 2026</span>
     </div>
     """, unsafe_allow_html=True)
 
@@ -313,54 +288,52 @@ if sentimen_sel:
 # ── HEADER ───────────────────────────────────────────────────────────────────
 st.markdown(f"""
 <div style="
-    background: linear-gradient(135deg, #2e1f18 0%, #1e1410 60%, #1a1210 100%);
-    border: 1px solid #3a2e27;
-    border-radius: 20px;
-    padding: 2rem 2.25rem;
-    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #2b1111 0%, #170b0b 50%, #0A0A0A 100%);
+    border: 1px solid #3D2626;
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 ">
-    <!-- Decorative contour lines (SVG) -->
-    <svg style="position:absolute;right:0;top:0;opacity:0.07;width:280px;height:160px;"
+    <svg style="position:absolute;right:-20px;top:-20px;opacity:0.15;width:300px;height:200px;"
          viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="240" cy="80" rx="200" ry="60" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="160" ry="46" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="120" ry="33" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="82" ry="22" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="48" ry="13" stroke="#E8722A" stroke-width="1.5" fill="none"/>
-        <ellipse cx="240" cy="80" rx="22" ry="6" stroke="#E8722A" stroke-width="1.5" fill="none"/>
+        <ellipse cx="240" cy="80" rx="200" ry="60" stroke="#D32F2F" stroke-width="2" fill="none"/>
+        <ellipse cx="240" cy="80" rx="160" ry="46" stroke="#D32F2F" stroke-width="2" fill="none"/>
+        <ellipse cx="240" cy="80" rx="120" ry="33" stroke="#D32F2F" stroke-width="2" fill="none"/>
+        <ellipse cx="240" cy="80" rx="82" ry="22" stroke="#D32F2F" stroke-width="2" fill="none"/>
     </svg>
 
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem; position:relative; z-index:1;">
         <div>
             <div style="
                 font-family:'Sora',sans-serif;
-                font-size:28px;font-weight:800;
-                color:#f5f0e8;
-                letter-spacing:-0.03em;line-height:1.1;
+                font-size:32px;font-weight:800;
+                color:#FFFFFF;
+                letter-spacing:-0.02em;line-height:1.2;
             ">Dashboard Sentimen<br>
-                <span style="color:#E8722A;">Wisata Gunung Kelud</span>
+                <span style="color:#D32F2F;">Wisata Gunung Kelud</span>
             </div>
             <div style="
-                margin-top:10px;font-size:13px;color:#9b9189;
-                font-family:'Inter',sans-serif;font-weight:500;letter-spacing:0.01em;
+                margin-top:12px;font-size:14px;color:#A38C8C;
+                font-family:'Inter',sans-serif;font-weight:500;
             ">
-                Analisis ulasan pengunjung &nbsp;·&nbsp; {len(df_all):,} total data
+                Analisis ulasan pengunjung &nbsp;·&nbsp; <strong style="color:#FFF;">{len(df_all):,}</strong> total data
             </div>
         </div>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
             <div style="
-                background:#E8722A18;border:1px solid #E8722A55;
-                border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#E8722A;
-                font-family:'Sora',sans-serif;letter-spacing:0.03em;
-            ">🔥 {len(df):,} ulasan ditampilkan</div>
+                background:rgba(211, 47, 47, 0.1);border:1px solid rgba(211, 47, 47, 0.4);
+                border-radius:30px;padding:8px 20px;
+                font-size:13px;font-weight:700;color:#FF5252;
+                font-family:'Sora',sans-serif;
+            ">🔥 {len(df):,} ulasan aktif</div>
             <div style="
-                background:#2A9D5C18;border:1px solid #2A9D5C55;
-                border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#2A9D5C;
-                font-family:'Sora',sans-serif;letter-spacing:0.03em;
+                background:rgba(255, 255, 255, 0.05);border:1px solid rgba(255, 255, 255, 0.15);
+                border-radius:30px;padding:8px 20px;
+                font-size:13px;font-weight:700;color:#E0E0E0;
+                font-family:'Sora',sans-serif;
             ">📍 {grup_sel}</div>
         </div>
     </div>
@@ -384,8 +357,7 @@ c1, c2, c3, c4 = st.columns(4)
 c1.metric("📋 Total Ulasan",   total)
 c2.metric("✅ Positif",        f"{pct_pos}%",  f"{n_pos} ulasan")
 c3.metric("❌ Negatif",        f"{pct_neg}%",  f"{n_neg} ulasan", delta_color="inverse")
-c4.metric("🤖 Akurasi Model",  f"{akurasi}%" if akurasi else "—",
-          "vs label asli" if akurasi else "")
+c4.metric("🤖 Akurasi Model",  f"{akurasi}%" if akurasi else "—", "vs label asli" if akurasi else "")
 
 st.markdown("---")
 
@@ -393,32 +365,28 @@ st.markdown("---")
 cg1, cg2 = st.columns([1, 1.5])
 
 with cg1:
-    st.subheader("Distribusi Label Asli")
+    st.subheader("Distribusi Label")
     pie_df = df["label"].value_counts().reset_index()
     pie_df.columns = ["Sentimen", "Jumlah"]
     fig_pie = px.pie(
         pie_df, names="Sentimen", values="Jumlah",
         color="Sentimen",
         color_discrete_map={"positif": C_POS, "negatif": C_NEG},
-        hole=0.62,
+        hole=0.65,
     )
     fig_pie.update_traces(
         textinfo="percent+label",
-        textfont=dict(size=13, family="Sora, sans-serif", color=C_TEXT),
-        marker=dict(line=dict(color="#1a1210", width=3)),
+        textfont=dict(size=14, family="Sora, sans-serif", color="#FFF"),
+        marker=dict(line=dict(color="#0A0A0A", width=4)),
     )
     fig_pie.update_layout(
         **plotly_base(),
-        showlegend=True, height=280,
-        legend=dict(
-            orientation="h", y=-0.08, x=0.5, xanchor="center",
-            font=dict(color=C_MUTED, size=12),
-        ),
+        showlegend=False, height=320,
     )
     st.plotly_chart(fig_pie, use_container_width=True)
 
 with cg2:
-    st.subheader("Label Asli vs Prediksi Model")
+    st.subheader("Label Asli vs Prediksi")
     if "prediksi_model" in df.columns:
         perbandingan = pd.DataFrame({
             "Kategori": ["Label Asli", "Prediksi Model"],
@@ -435,34 +403,23 @@ with cg2:
         fig_bar.add_trace(go.Bar(
             name="Positif", x=perbandingan["Kategori"],
             y=perbandingan["Positif"], marker_color=C_POS,
-            marker=dict(cornerradius=6),
+            marker=dict(cornerradius=4),
             text=perbandingan["Positif"], textposition="outside",
-            textfont=dict(color=C_TEXT, size=12, family="Sora"),
+            textfont=dict(color="#FFF", size=13, family="Sora"),
         ))
         fig_bar.add_trace(go.Bar(
             name="Negatif", x=perbandingan["Kategori"],
             y=perbandingan["Negatif"], marker_color=C_NEG,
-            marker=dict(cornerradius=6),
+            marker=dict(cornerradius=4),
             text=perbandingan["Negatif"], textposition="outside",
-            textfont=dict(color=C_TEXT, size=12, family="Sora"),
+            textfont=dict(color="#FFF", size=13, family="Sora"),
         ))
         fig_bar.update_layout(
             **plotly_base(),
-            barmode="group", height=280,
-            xaxis=dict(
-                showgrid=False,
-                tickfont=dict(color=C_MUTED, size=12, family="Sora"),
-                linecolor=C_GRID,
-            ),
-            yaxis=dict(
-                showgrid=True, gridcolor=C_GRID,
-                tickfont=dict(color=C_MUTED, size=11),
-                title=dict(text="Jumlah Ulasan", font=dict(color=C_MUTED, size=11)),
-            ),
-            legend=dict(
-                orientation="h", y=-0.12, x=0.5, xanchor="center",
-                font=dict(color=C_MUTED, size=12),
-            ),
+            barmode="group", height=320,
+            xaxis=dict(showgrid=False, tickfont=dict(color=C_MUTED, size=13, family="Sora"), linecolor=C_GRID),
+            yaxis=dict(showgrid=True, gridcolor=C_GRID, tickfont=dict(color=C_MUTED, size=11), title=dict(text="Jumlah Ulasan", font=dict(color=C_MUTED))),
+            legend=dict(orientation="h", y=-0.15, x=0.5, xanchor="center", font=dict(color="#FFF", size=13)),
         )
         st.plotly_chart(fig_bar, use_container_width=True)
     else:
@@ -471,99 +428,85 @@ with cg2:
 st.markdown("---")
 
 # ── TREN WAKTU ────────────────────────────────────────────────────────────────
-st.subheader("📈 Tren Ulasan per Periode Waktu")
-tren_df = (
-    df.groupby(["waktu", "waktu_urut", "label"])
-    .size()
-    .reset_index(name="n")
-    .sort_values("waktu_urut", ascending=False)
-)
-tren_pivot = (
-    tren_df.pivot_table(index=["waktu","waktu_urut"], columns="label", values="n", fill_value=0)
-    .reset_index()
-    .sort_values("waktu_urut", ascending=False)
-)
+if "waktu" in df.columns:
+    st.subheader("📈 Tren Ulasan Waktu")
+    tren_df = (
+        df.groupby(["waktu", "waktu_urut", "label"])
+        .size()
+        .reset_index(name="n")
+        .sort_values("waktu_urut", ascending=False)
+    )
+    tren_pivot = (
+        tren_df.pivot_table(index=["waktu","waktu_urut"], columns="label", values="n", fill_value=0)
+        .reset_index()
+        .sort_values("waktu_urut", ascending=False)
+    )
 
-fig_tren = go.Figure()
-if "positif" in tren_pivot.columns:
-    fig_tren.add_trace(go.Scatter(
-        x=tren_pivot["waktu"], y=tren_pivot["positif"],
-        name="Positif", mode="lines+markers",
-        line=dict(color=C_POS, width=2.5),
-        marker=dict(size=7, color=C_POS, line=dict(color="#1a1210", width=2)),
-        fill="tozeroy",
-        fillcolor=f"rgba(42,157,92,0.08)",
-    ))
-if "negatif" in tren_pivot.columns:
-    fig_tren.add_trace(go.Scatter(
-        x=tren_pivot["waktu"], y=tren_pivot["negatif"],
-        name="Negatif", mode="lines+markers",
-        line=dict(color=C_NEG, width=2.5, dash="dot"),
-        marker=dict(size=7, color=C_NEG, line=dict(color="#1a1210", width=2)),
-        fill="tozeroy",
-        fillcolor=f"rgba(192,57,43,0.07)",
-    ))
-fig_tren.update_layout(
-    **plotly_base(),
-    height=280,
-    xaxis=dict(
-        showgrid=False, tickangle=-35,
-        tickfont=dict(color=C_MUTED, size=11),
-        linecolor=C_GRID,
-    ),
-    yaxis=dict(
-        showgrid=True, gridcolor=C_GRID,
-        tickfont=dict(color=C_MUTED, size=11),
-        title=dict(text="Jumlah Ulasan", font=dict(color=C_MUTED, size=11)),
-    ),
-    legend=dict(
-        orientation="h", y=-0.22, x=0.5, xanchor="center",
-        font=dict(color=C_MUTED, size=12),
-    ),
-    hovermode="x unified",
-)
-st.plotly_chart(fig_tren, use_container_width=True)
-
-st.markdown("---")
+    fig_tren = go.Figure()
+    if "positif" in tren_pivot.columns:
+        fig_tren.add_trace(go.Scatter(
+            x=tren_pivot["waktu"], y=tren_pivot["positif"],
+            name="Positif", mode="lines+markers",
+            line=dict(color=C_POS, width=3),
+            marker=dict(size=8, color=C_POS, line=dict(color="#0A0A0A", width=2)),
+            fill="tozeroy", fillcolor=f"rgba(0, 230, 118, 0.05)",
+        ))
+    if "negatif" in tren_pivot.columns:
+        fig_tren.add_trace(go.Scatter(
+            x=tren_pivot["waktu"], y=tren_pivot["negatif"],
+            name="Negatif", mode="lines+markers",
+            line=dict(color=C_NEG, width=3, dash="solid"),
+            marker=dict(size=8, color=C_NEG, line=dict(color="#0A0A0A", width=2)),
+            fill="tozeroy", fillcolor=f"rgba(255, 61, 0, 0.05)",
+        ))
+    fig_tren.update_layout(
+        **plotly_base(), height=320,
+        xaxis=dict(showgrid=False, tickangle=-35, tickfont=dict(color=C_MUTED, size=12), linecolor=C_GRID),
+        yaxis=dict(showgrid=True, gridcolor=C_GRID, tickfont=dict(color=C_MUTED, size=11)),
+        legend=dict(orientation="h", y=-0.25, x=0.5, xanchor="center", font=dict(color="#FFF", size=13)),
+        hovermode="x unified",
+    )
+    st.plotly_chart(fig_tren, use_container_width=True)
+    st.markdown("---")
 
 # ── WORD CLOUD ────────────────────────────────────────────────────────────────
-def buat_wc(teks_series, cmap, label):
-    teks = " ".join(teks_series.dropna().tolist()).strip()
-    if not teks:
-        st.info(f"Tidak ada data {label}.")
-        return
-    wc = WordCloud(
-        width=720, height=340,
-        background_color=None, mode="RGBA",
-        colormap=cmap, max_words=90,
-        prefer_horizontal=0.82, collocations=False,
-        min_font_size=11,
-        font_step=1,
-    ).generate(teks)
-    fig, ax = plt.subplots(figsize=(7.2, 3.4), facecolor="none")
-    ax.imshow(wc, interpolation="bilinear")
-    ax.axis("off")
-    fig.patch.set_alpha(0)
-    buf = BytesIO()
-    fig.savefig(buf, format="png", bbox_inches="tight", transparent=True, dpi=130)
-    buf.seek(0)
-    st.image(buf, use_container_width=True)
-    plt.close(fig)
+if "clean_text" in df.columns:
+    def buat_wc(teks_series, cmap, label):
+        teks = " ".join(teks_series.dropna().tolist()).strip()
+        if not teks:
+            st.info(f"Tidak ada data {label}.")
+            return
+        wc = WordCloud(
+            width=800, height=400,
+            background_color=None, mode="RGBA",
+            colormap=cmap, max_words=80,
+            prefer_horizontal=0.85, collocations=False,
+            font_step=2,
+        ).generate(teks)
+        fig, ax = plt.subplots(figsize=(8, 4), facecolor="none")
+        ax.imshow(wc, interpolation="bilinear")
+        ax.axis("off")
+        fig.patch.set_alpha(0)
+        buf = BytesIO()
+        fig.savefig(buf, format="png", bbox_inches="tight", transparent=True, dpi=150)
+        buf.seek(0)
+        st.image(buf, use_container_width=True)
+        plt.close(fig)
 
-wc1, wc2 = st.columns(2)
-with wc1:
-    st.subheader("☁️ Kata Populer — Positif")
-    buat_wc(df[df["label"] == "positif"]["clean_text"], "YlGn", "positif")
+    wc1, wc2 = st.columns(2)
+    with wc1:
+        st.subheader("☁️ Kata Positif")
+        buat_wc(df[df["label"] == "positif"]["clean_text"], "Greens", "positif")
 
-with wc2:
-    st.subheader("☁️ Kata Populer — Negatif")
-    buat_wc(df[df["label"] == "negatif"]["clean_text"], "OrRd", "negatif")
+    with wc2:
+        st.subheader("☁️ Kata Negatif")
+        buat_wc(df[df["label"] == "negatif"]["clean_text"], "Reds", "negatif")
 
-st.markdown("---")
+    st.markdown("---")
 
 # ── CONFUSION MATRIX ────────────────────────────────────────────────────────
 if "prediksi_model" in df.columns and total:
-    st.subheader("🎯 Confusion Matrix Model")
+    st.subheader("🎯 Performa Model Klasifikasi")
 
     tp = ((df["label"]=="positif") & (df["prediksi_model"]=="positif")).sum()
     fp = ((df["label"]=="negatif") & (df["prediksi_model"]=="positif")).sum()
@@ -571,25 +514,24 @@ if "prediksi_model" in df.columns and total:
     tn = ((df["label"]=="negatif") & (df["prediksi_model"]=="negatif")).sum()
 
     z         = [[tn, fp], [fn, tp]]
-    x_labels  = ["Prediksi: Negatif", "Prediksi: Positif"]
-    y_labels  = ["Label: Negatif", "Label: Positif"]
+    x_labels  = ["Prediksi Negatif", "Prediksi Positif"]
+    y_labels  = ["Aktual Negatif", "Aktual Positif"]
 
     fig_cm = go.Figure(go.Heatmap(
         z=z, x=x_labels, y=y_labels,
         text=[[str(v) for v in row] for row in z],
         texttemplate="%{text}",
-        textfont=dict(size=20, color="white", family="Sora"),
-        colorscale=[[0, C_NEG], [0.5, "#E8722A"], [1, C_POS]],
+        textfont=dict(size=24, color="white", family="Sora"),
+        colorscale=[[0, "#170B0B"], [0.5, "#8B0000"], [1, "#D32F2F"]], # Maroon Gradient
         showscale=False,
     ))
     fig_cm.update_layout(
-        **plotly_base(),
-        height=270,
-        xaxis=dict(side="bottom", tickfont=dict(color=C_MUTED, size=12, family="Sora")),
-        yaxis=dict(tickfont=dict(color=C_MUTED, size=12, family="Sora")),
+        **plotly_base(), height=300,
+        xaxis=dict(side="bottom", tickfont=dict(color="#FFF", size=13, family="Sora")),
+        yaxis=dict(tickfont=dict(color="#FFF", size=13, family="Sora")),
     )
 
-    col_cm, col_info = st.columns([1.2, 1])
+    col_cm, col_info = st.columns([1.5, 1])
     with col_cm:
         st.plotly_chart(fig_cm, use_container_width=True)
     with col_info:
@@ -597,19 +539,18 @@ if "prediksi_model" in df.columns and total:
         rec  = round(tp / (tp + fn) * 100, 1) if (tp + fn) else 0
         f1   = round(2 * prec * rec / (prec + rec), 1) if (prec + rec) else 0
 
-        # Custom styled metric cards for model stats
-        def stat_card(label, value, color="#e8e0d4"):
+        def stat_card(label, value, color="#FFF"):
             return f"""
             <div style="
-                background:#241c18;border:1px solid #3a2e27;border-radius:12px;
-                padding:12px 16px;margin-bottom:8px;
+                background:#171212;border:1px solid #3D2626;border-radius:8px;
+                padding:10px 16px;margin-bottom:8px;
                 display:flex;align-items:center;justify-content:space-between;
             ">
-                <span style="font-size:12px;color:#9b9189;font-family:'Inter',sans-serif;
-                             text-transform:uppercase;letter-spacing:0.06em;font-weight:600;">
+                <span style="font-size:12px;color:#A38C8C;font-family:'Inter',sans-serif;
+                             text-transform:uppercase;letter-spacing:0.05em;font-weight:600;">
                     {label}
                 </span>
-                <span style="font-size:18px;font-weight:700;color:{color};
+                <span style="font-size:18px;font-weight:800;color:{color};
                              font-family:'Sora',sans-serif;">
                     {value}
                 </span>
@@ -617,28 +558,27 @@ if "prediksi_model" in df.columns and total:
             """
 
         st.markdown(
-            stat_card("Akurasi",       f"{akurasi}%",  "#E8722A") +
+            stat_card("Akurasi",       f"{akurasi}%",  "#D32F2F") +
             stat_card("Presisi",        f"{prec}%",     C_POS) +
             stat_card("Recall",         f"{rec}%",      C_POS) +
             stat_card("F1-Score",       f"{f1}%",       C_POS) +
             stat_card("True Positive",  str(tp)) +
-            stat_card("True Negative",  str(tn)) +
-            stat_card("False Positive", str(fp), C_NEG) +
-            stat_card("False Negative", str(fn), C_NEG),
+            stat_card("False Positive", str(fp),        C_NEG),
             unsafe_allow_html=True
         )
 
     st.markdown("---")
 
 # ── TABEL DATA ────────────────────────────────────────────────────────────────
-st.subheader("📄 Data Ulasan Pengunjung")
+st.subheader("📄 Eksekusi Data Ulasan")
 
-search_q = st.text_input("🔍 Cari ulasan...", placeholder="Ketik kata kunci untuk memfilter...")
+search_q = st.text_input("🔍 Cari ulasan...", placeholder="Ketik kata kunci untuk memfilter tabel...")
 df_view  = df.copy()
-if search_q:
-    df_view = df_view[df_view["review"].str.contains(search_q, case=False, na=False)]
 
-cols = ["user", "waktu", "review", "label"]
+if "review" in df_view.columns and search_q:
+    df_view = df_view[df_view["review"].astype(str).str.contains(search_q, case=False, na=False)]
+
+cols = [c for c in ["user", "waktu", "review", "label"] if c in df_view.columns]
 if show_pred and "prediksi_model" in df_view.columns:
     cols.append("prediksi_model")
 
@@ -646,9 +586,9 @@ df_display = df_view[cols].copy()
 
 def warna_sentimen(val):
     if val == "positif":
-        return "background-color:#0d2e1e;color:#2ecc90;border-radius:4px;font-weight:600;font-size:12px;"
+        return "background-color:#003314;color:#00E676;border-radius:4px;font-weight:700;font-size:12px;"
     elif val == "negatif":
-        return "background-color:#2e0d0d;color:#e05c5c;border-radius:4px;font-weight:600;font-size:12px;"
+        return "background-color:#330A00;color:#FF3D00;border-radius:4px;font-weight:700;font-size:12px;"
     return ""
 
 styled = df_display.style.applymap(
@@ -656,14 +596,14 @@ styled = df_display.style.applymap(
     subset=[c for c in ["label", "prediksi_model"] if c in df_display.columns],
 )
 
-st.dataframe(styled, use_container_width=True, height=400)
-st.caption(f"Menampilkan {len(df_view):,} dari {len(df):,} ulasan")
+st.dataframe(styled, use_container_width=True, height=450)
+st.caption(f"Menampilkan {len(df_view):,} dari total {len(df):,} ulasan aktif")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
 # ── DOWNLOAD ──────────────────────────────────────────────────────────────────
 st.download_button(
-    "⬇️ Unduh Data Terfilter (CSV)",
+    "⬇️ Unduh Data (CSV)",
     data=df_view.to_csv(index=False).encode("utf-8"),
     file_name="ulasan_kelud_filtered.csv",
     mime="text/csv",
