@@ -232,7 +232,7 @@ def plotly_base():
 # ── LOAD DATA ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("dataset_kelud_final_prediction.csv")
+    df = pd.read_csv("kelud_final.csv")
     df.columns = df.columns.str.strip().str.lower()
 
     urutan = {
@@ -636,7 +636,7 @@ def warna_sentimen(val):
         return "background-color:#2e0d0d;color:#e05c5c;border-radius:4px;font-weight:600;font-size:12px;"
     return ""
 
-styled = df_display.style.applymap(
+styled = df_display.style.map(
     warna_sentimen,
     subset=[c for c in ["label", "prediksi_model"] if c in df_display.columns],
 )
