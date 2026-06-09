@@ -267,17 +267,17 @@ with st.sidebar:
     # Topographic accent
     st.markdown("""
     <div style="
-        background: linear-gradient(135deg, #E8722A22 0%, #C0392B11 50%, transparent 100%);
+        background: linear-gradient(135deg, rgba(232,114,42,0.13) 0%, rgba(192,57,43,0.07) 50%, transparent 100%);
         border-radius: 12px;
         padding: 1.2rem 1rem 0.8rem;
         margin-bottom: 1.25rem;
-        border: 1px solid #E8722A33;
+        border: 1px solid rgba(232,114,42,0.2);
     ">
-        <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:800;
-                    color:#f5f0e8;letter-spacing:-0.02em;line-height:1.2;">
+        <div style="font-family:sans-serif;font-size:18px;font-weight:800;
+                    color:#ffffff;letter-spacing:-0.02em;line-height:1.2;">
             🌋 Kelud
         </div>
-        <div style="font-size:11px;color:#9b9189;text-transform:uppercase;
+        <div style="font-size:11px;color:#a09488;text-transform:uppercase;
                     letter-spacing:0.08em;margin-top:4px;font-weight:600;">
             Sentiment Explorer
         </div>
@@ -352,16 +352,16 @@ st.markdown(f"""
         </div>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
             <div style="
-                background:#E8722A18;border:1px solid #E8722A55;
+                background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.35);
                 border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#E8722A;
-                font-family:'Sora',sans-serif;letter-spacing:0.03em;
+                font-size:12px;font-weight:600;color:#FF8C42;
+                font-family:sans-serif;letter-spacing:0.03em;
             ">🔥 {len(df):,} ulasan ditampilkan</div>
             <div style="
-                background:#2A9D5C18;border:1px solid #2A9D5C55;
+                background:rgba(42,157,92,0.1);border:1px solid rgba(42,157,92,0.35);
                 border-radius:30px;padding:6px 18px;
-                font-size:12px;font-weight:600;color:#2A9D5C;
-                font-family:'Sora',sans-serif;letter-spacing:0.03em;
+                font-size:12px;font-weight:600;color:#2ecc90;
+                font-family:sans-serif;letter-spacing:0.03em;
             ">📍 {grup_sel}</div>
         </div>
     </div>
