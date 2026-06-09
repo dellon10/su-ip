@@ -232,7 +232,7 @@ def plotly_base():
 # ── LOAD DATA ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("kelud_final.csv")
+    df = pd.read_csv("dataset_kelud_final_prediction.csv")
     df.columns = df.columns.str.strip().str.lower()
 
     urutan = {
